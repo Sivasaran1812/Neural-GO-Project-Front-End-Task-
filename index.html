@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+
+</head>
+<body>
+  <div class="container">
+    <!-- Creating field like email,username,address,phone,resume -->
+    <form id="jobApplicationForm" method="post" action="#" enctype="multipart/form-data">
+        <div class="input-group">
+            <input type="text" id="name" name="name" required>
+            <label for="name" class="label1">Username</label>
+            <div class="error" id="nameError"></div>
+        </div>
+        <div class="input-group">
+            <input type="email" id="email" name="email" required >
+            <label for="email">Email</label>
+            <div class="error" id="emailError"></div>
+        </div>
+        <div class="input-group">
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+            <label for="phone">Phone Number</label>
+            <div class="error" id="phoneError"></div>
+        </div>
+        <div class="input-group">
+            <textarea id="address" name="address" required></textarea>
+            <label for="address">Address</label>
+            <div class="error" id="addressError"></div>
+        </div>
+        <div >
+            <input type="file" id="resume" name="resume" accept=".pdf,.docx" required>
+            <label for="resume">Resume</label>
+            <div class="error" id="resumeError"></div>
+        </div>
+        <button type="submit" id="submitBtn" disabled>Submit</button>
+    </form>  
+  </div>
+  <div id="successMessage" style="display: none;">Your Details are Submitted Successfully!!!!</div>
+</body>
+</html>

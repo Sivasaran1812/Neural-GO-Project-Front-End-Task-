@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*
+{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Styling the body */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    margin-left:100px;
+    min-height: 100vh;
+    flex-direction: column;
+   background-image: url(bg.jpeg);
+   background-size:cover ;
+   backdrop-filter: blur(3px); 
+}
+
+/* Styling the job application form */
+#jobApplicationForm {
+    background-color:linear-gradient(68.3deg, rgb(23, 41, 77) 6.3%, rgb(243, 113, 154) 90.9%);
+    border-radius: 10px;
+    padding: 30px;
+    margin-left: 200px;
+    margin-bottom: 70px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width:50%;
+    height:200%
+} 
+
+/* Styling input groups within the form */
+.input-group
+{
+    position: relative;
+    margin:20px 0;
+
+}
+
+/* Styling labels within input groups */
+ .input-group label{
+    position:absolute;
+    top:40%;
+    left:5px;
+    transform: translateY(-50%);
+    font-size:12px;
+    color:#fff;
+    padding:0 5px;
+    pointer-events: none ;
+ }
+
+ /* Styling input fields and textareas */
+ .input-group input,textarea{
+    width:320px;
+    height:40px;
+    font-size:12px;
+    color: #fff;
+    padding: 9px;
+    background:transparent;
+    border: 1.2px solid#fff;
+    border-radius:5px;
+ }
+
+ /* Styling focused and valid input fields */
+.input-group textarea:focus,
+.input-group textarea:valid {
+    border-color: #000; 
+}
+
+/* Styling focused and valid textareas */
+.input-group input:focus~label,
+.input-group input:valid~label{
+    color:aqua;
+    transform: translateX(10px) translateY(-7px);
+    font-size:0.7em;
+    padding:0px 10px;
+    margin-left:-10px;
+    background: #512b7e;
+    border-left: 1px solid #00dfc4;
+    border-right: 1px solid #00dfc4;
+    top:0;
+}
+
+/* Styling focused and valid textareas */
+.input-group textarea:focus + label,
+.input-group textarea:valid + label {
+    color:aqua;
+    transform: translateX(10px) translateY(-7px);
+    font-size:0.7em;
+    padding:0px 10px;
+    margin-left:-10px;
+    background: #512b7e;
+    border-left: 1px solid #00dfc4;
+    border-right: 1px solid #00dfc4;
+    top:0;
+}
+
+/* Hiding file input field */
+input[type="file"]{
+    display:none;
+}
+
+/* Styling label for file input */
+label[for="resume"]
+{
+    display: inline-block;
+    text-transform: uppercase;
+    color:#fff;
+    background: linear-gradient(68.3deg, rgb(23, 41, 77) 6.3%, rgb(243, 113, 154) 90.9%);    
+    text-align:center;
+    padding:15px 15px;
+    font-size:12px;
+    letter-spacing: 1.5px;
+    user-select:none;
+    cursor:pointer;
+    border-radius: 8px;
+}
+
+/*Error Styling*/
+.error {
+    color: #ff0000;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+/*Button Styling*/
+button[type="submit"] {
+    margin-top: 30px;
+    margin-left: 1px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/*Disabled Button Styling*/
+
+button[type="submit"]:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
